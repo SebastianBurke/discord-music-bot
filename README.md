@@ -32,6 +32,9 @@ Before running the bot you need:
 
 ## Setup
 
+Note: YouTube actively blocks bot access to audio streams. This bot works around that by configuring yt-dlp to impersonate YouTube's Android VR app (android_vr client), which bypasses the JavaScript signature challenges that block most bots. No extra setup needed.
+If the bot stops playing music, run pip3.11 install -U yt-dlp — yt-dlp updates frequently to keep up with YouTube's changes, and keeping it up to date is the first fix to try if anything breaks.
+
 ### 1. Clone / download this project
 
 ```bash
