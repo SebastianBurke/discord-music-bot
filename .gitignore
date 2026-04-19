@@ -1,0 +1,8 @@
+.env
+cookies.txt
+__pycache__/
+*.py[cod]
+/tmp/
+*.webm
+*.m4a
+*.mp3
