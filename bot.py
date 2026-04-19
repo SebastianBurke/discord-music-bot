@@ -36,8 +36,13 @@ async def on_ready():
     print(f"✅ Logged in as {bot.user} (ID: {bot.user.id})")
     await bot.change_presence(activity=discord.Activity(
         type=discord.ActivityType.listening,
-        name=f"{PREFIX}play | {PREFIX}help"
+        name=f"{PREFIX}play | {PREFIX}commands"
     ))
+    try:
+        synced = await bot.tree.sync()
+        print(f"🔗 Synced {len(synced)} slash command(s).")
+    except Exception as e:
+        print(f"⚠️  Slash command sync failed: {e}")
 
 
 @bot.event
